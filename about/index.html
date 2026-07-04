@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de - Lactosa Intolerante</title>
+    <!-- Asegúrate de incluir la fuente que estés usando -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #050505;
+            --text-color: #f0f0f0;
+            --accent: #555;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Martian Mono', monospace;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Botón para volver al inicio */
+        .back-nav {
+            padding: 2rem;
+            position: sticky;
+            top: 0;
+            background: rgba(5, 5, 5, 0.9);
+            z-index: 100;
+        }
+
+        .back-nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid var(--text-color);
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-nav a:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        /* Sección Principal (Hero) */
+        .hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            border: 2px solid var(--text-color);
+            margin-bottom: 2rem;
+            filter: grayscale(100%); /* Blanco y negro para mantener la estética */
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        /* Secciones con Scroll */
+        .scroll-section {
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .story-block {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 6rem;
+        }
+
+        /* Alternar el orden en filas pares para mayor dinamismo */
+        .story-block:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .story-image {
+            flex: 1;
+        }
+
+        .story-image img {
+            width: 100%;
+            border: 1px solid var(--accent);
+            filter: grayscale(80%);
+            transition: filter 0.3s ease;
+        }
+
+        .story-image img:hover {
+            filter: grayscale(0%);
+        }
+
+        .story-text {
+            flex: 1;
+        }
+
+        .story-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Adaptación para celulares */
+        @media (max-width: 768px) {
+            .story-block, .story-block:nth-child(even) {
+                flex-direction: column;
+                gap: 1.5rem;
+                margin-bottom: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="back-nav">
+        <a href="/">← Volver al inicio</a>
+    </nav>
+
+    <!-- Imagen Principal e Intro -->
+    <section class="hero">
+        <!-- Reemplaza la ruta de la imagen con la foto oficial -->
+        <img src="ruta/a/tu/imagen-principal.jpg" alt="Lactosa Intolerante Banda Completa">
+        <h1>Lactosa Intolerante</h1>
+        <p>Somos una banda nacida del ruido y la necesidad de hacer algo distinto. Aquí contamos un poco de nuestra historia, desde los primeros ensayos hasta donde estamos hoy.</p>
+    </section>
+
+    <!-- Bloques de Historia (Scroll) -->
+    <section class="scroll-section">
+        
+        <!-- Bloque 1 -->
+        <div class="story-block">
+            <div class="story-image">
+                <img src="ruta/a/tu/imagen-1.jpg" alt="Ensayos">
+            </div>
+            <div class="story-text">
+                <h3>Los Inicios</h3>
+                <p>Todo empezó en una pieza pequeña con acústica terrible. No teníamos los mejores equipos, pero las ganas sobraban. Fueron meses de encerrarnos a componer las primeras maquetas.</p>
+            </div>
+        </div>
+
+        <!-- Bloque 2 -->
+        <div class="story-block">
+            <div class="story-image">
+                <img src="ruta/a/tu/imagen-2.jpg" alt="Equipos y sonido">
+            </div>
+            <div class="story-text">
+                <h3>Buscando el Sonido</h3>
+                <p>Ensayos de madrugada probando configuraciones de pedales, ajustando el tono crudo de un bajo Squier Jaguar y saturando los amplificadores hasta encontrar esa mezcla sucia pero definida que nos caracteriza.</p>
+            </div>
+        </div>
+
+        <!-- Bloque 3 -->
+        <div class="story-block">
+            <div class="story-image">
+                <img src="ruta/a/tu/imagen-3.jpg" alt="En vivo">
+            </div>
+            <div class="story-text">
+                <h3>Al Escenario</h3>
+                <p>La primera vez que tocamos en vivo frente a público real. La energía del momento nos confirmó que todo el ruido del encierro tenía sentido. Y esto recién comienza.</p>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>
