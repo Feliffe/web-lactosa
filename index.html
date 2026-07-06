@@ -6,7 +6,6 @@
     <title>Sitio Oficial | Lactosa Intolerante</title>
 
     <link rel="icon" type="image/png" href="LogoLI.png">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;700&display=swap" rel="stylesheet">
@@ -30,7 +29,6 @@
             text-align: center;
             padding: 20px; 
         }
-
         
         h1 {
             margin-bottom: 0.5rem;
@@ -46,7 +44,7 @@
             font-weight: 300;
             letter-spacing: 0.2em;
             color: #888888;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             text-transform: uppercase;
         }
 
@@ -55,6 +53,7 @@
             gap: 2rem;
             flex-wrap: wrap;
             justify-content: center;
+            margin-top: 2rem;
         }
 
         .nav-links a {
@@ -94,6 +93,67 @@
             color: #555555;
             font-weight: 300;
         }
+
+        .btn-desplegable {
+            background-color: #ff0000;
+            color: #ffffff; 
+            font-family: 'Martian Mono', monospace;
+            font-weight: 700;
+            font-size: 1.8rem;
+            padding: 15px 50px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin: 0 auto 1.5rem auto;
+            transition: transform 0.1s ease, filter 0.2s ease;
+        }
+
+        .btn-desplegable:active {
+            transform: scale(0.97);
+        }
+
+        .btn-desplegable:hover {
+            filter: brightness(1.2);
+        }
+
+        .info-banda-wrapper {
+            max-height: 0;
+            overflow: hidden;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            transition: max-height 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .info-banda-wrapper.abierto {
+            max-height: 2500px;
+        }
+
+        .info-banda-wrapper img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 2235 / 1257; 
+            object-fit: cover;
+            border: 2px solid #555;
+            margin-top: 1rem;
+            filter: grayscale(80%);
+            transition: filter 0.3s ease;
+        }
+
+        .info-banda-wrapper img:hover {
+            filter: grayscale(0%);
+        }
+
+        .descripcion-internet {
+            margin-top: 1.5rem;
+            padding: 0 1rem 1rem 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #f0f0f0;
+            text-align: justify;
+        }
     </style>
 </head>
 <body>
@@ -104,6 +164,15 @@
 
     <p class="subtitle">Sitio en Construcción</p>
 
+    <button class="btn-desplegable" onclick="desplegarInfo()">Acerca de</button>
+
+    <div class="info-banda-wrapper" id="seccionInfo">
+        <img src="foto_lactosa.png" alt="Lactosa Intolerante" width="2235" height="1257">
+        <div class="descripcion-internet">
+            <p><strong>Lactosa Intolerante</strong> es una banda de rock/indie emergente originaria de Valparaíso. Haciéndose camino en la escena local con un sonido crudo y directo, la banda recientemente hizo su debut oficial en plataformas como Spotify. Hoy en día, sus maquetas y más recientes lanzamientos han comenzado a hacer eco en foros y discusiones de internet, posicionándolos como un proyecto fresco y recomendado dentro de la nueva ola del rock independiente chileno.</p>
+        </div>
+    </div>
+    
     <div class="nav-links">
         <a href="https://linktr.ee/LactosaIntolerante" target="_blank">Música</a>
         <a href="https://www.instagram.com/lactosa_intolerante/" target="_blank">Instagram</a>
@@ -114,6 +183,20 @@
     <footer>
         &copy; 2026 Lactosa Intolerante. Todos los derechos reservados.
     </footer>
+
+    <script>
+        function desplegarInfo() {
+            const seccion = document.getElementById('seccionInfo');
+            
+            seccion.classList.toggle('abierto');
+            
+            if (seccion.classList.contains('abierto')) {
+                setTimeout(() => {
+                    seccion.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 150);
+            }
+        }
+    </script>
 
 </body>
 </html>
