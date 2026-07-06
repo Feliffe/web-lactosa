@@ -87,8 +87,9 @@
         }
 
         footer {
-            position: absolute;
-            bottom: 20px;
+            margin-top: auto;
+            padding-top: 3rem;
+            padding-bottom: 10px;
             font-size: 0.8rem;
             color: #555555;
             font-weight: 300;
@@ -124,11 +125,11 @@
             max-width: 900px;
             margin: 0 auto;
             text-align: center;
-            transition: max-height 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+            transition: max-height 1.2s ease-in-out;
         }
 
         .info-banda-wrapper.abierto {
-            max-height: 2500px;
+            max-height: 1200px;
         }
 
         .info-banda-wrapper img {
@@ -169,7 +170,7 @@
     <div class="info-banda-wrapper" id="seccionInfo">
         <img src="foto_lactosa.png" alt="Lactosa Intolerante" width="2235" height="1257">
         <div class="descripcion-internet">
-            <p><strong>Lactosa Intolerante</strong> es una banda de rock/indie emergente originaria de Valparaíso. Haciéndose camino en la escena local con un sonido crudo y directo, la banda recientemente hizo su debut oficial en plataformas como Spotify. Hoy en día, sus maquetas y más recientes lanzamientos han comenzado a hacer eco en foros y discusiones de internet, posicionándolos como un proyecto fresco y recomendado dentro de la nueva ola del rock independiente chileno.</p>
+            <p><strong>Lactosa Intolerante</strong> es una banda emergente de rock/indie nacida en Valparaíso. Con un sonido crudo, guitarras cargadas de energía y letras que retratan conflictos cotidianos desde una mirada honesta, la banda ha ido ganando espacio dentro de la escena local a través de sus presentaciones en vivo y de sus primeros lanzamientos. Tras su debut en plataformas como Spotify, su música ha comenzado a circular entre comunidades y foros de internet, donde cada vez más personas la recomiendan como una propuesta prometedora dentro del rock independiente chileno.</p>
         </div>
     </div>
     
@@ -193,7 +194,7 @@
             if (seccion.classList.contains('abierto')) {
                 setTimeout(() => {
                     seccion.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }, 150);
+                }, 50);
             }
         }
     </script>
