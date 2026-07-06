@@ -190,4 +190,24 @@
             const seccion = document.getElementById('seccionInfo');
             seccion.classList.toggle('abierto');
             
-            if (seccion.classList.contains('abierto
+            if (seccion.classList.contains('abierto')) {
+                let start = null;
+                
+                function step(timestamp) {
+                    if (!start) start = timestamp;
+                    const progress = timestamp - start;
+                    
+                    window.scrollBy(0, 8);
+                    
+                    if (progress < 900) {
+                        window.requestAnimationFrame(step);
+                    }
+                }
+                
+                window.requestAnimationFrame(step);
+            }
+        }
+    </script>
+
+</body>
+</html>
