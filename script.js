@@ -22,3 +22,27 @@ function desplegarInfo() {
         window.requestAnimationFrame(step);
     }
 }
+function copiarCorreo(event) {
+    event.preventDefault(); 
+    const correo = "contactolactosaintolerante@gmail.com";
+    
+  
+    navigator.clipboard.writeText(correo).then(() => {
+        mostrarNotificacion();
+    }).catch(err => {
+        console.error('Error al copiar el correo: ', err);
+    });
+}
+
+
+function mostrarNotificacion() {
+    const toast = document.getElementById('toast-notificacion');
+    
+    
+    toast.classList.add('mostrar');
+    
+    
+    setTimeout(() => {
+        toast.classList.remove('mostrar');
+    }, 3000);
+}
