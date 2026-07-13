@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .bg-cover {
     position: fixed;
     inset: 0;
@@ -189,11 +195,12 @@ footer {
     }
 }
 
+/* --- Notificación de Portapapeles --- */
 #toast-notificacion {
     position: fixed;
-    bottom: -60px; 
+    bottom: 20px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 50px);
     background-color: rgba(5, 5, 5, 0.95);
     color: #ffffff;
     border: 1px solid #555555;
@@ -203,11 +210,14 @@ footer {
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 0;
-    transition: bottom 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease;
+    visibility: hidden;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease, visibility 0.4s;
     z-index: 1000;
-    pointer-events: none; 
+    pointer-events: none;
+}
 
 #toast-notificacion.mostrar {
-    bottom: 30px;
+    transform: translate(-50%, 0);
     opacity: 1;
+    visibility: visible;
 }
