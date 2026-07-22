@@ -22,3 +22,14 @@ function desplegarInfo() {
         window.requestAnimationFrame(step);
     }
 }
+
+function toggleEntradas(event) {
+    event.preventDefault();
+
+    const entradasSection = document.getElementById('entradas');
+    entradasSection.classList.toggle('abierto');
+
+    if (entradasSection.classList.contains('abierto')) {
+        entradasSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}

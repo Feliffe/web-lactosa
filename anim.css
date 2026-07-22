@@ -32,13 +32,23 @@ body {
     font-family: 'Martian Mono', monospace;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
     text-align: center;
     padding: 20px;
     position: relative;
     overflow-x: hidden;
+}
+
+.page-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.2rem;
+    padding-bottom: 0.5rem;
 }
 
 body.fondo-activo {
@@ -101,8 +111,60 @@ h1 img {
     color: #cccccc;
 }
 
+.ticket-section {
+    max-width: 900px;
+    width: 100%;
+    margin: 2rem auto 0;
+    text-align: center;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.ticket-section.abierto {
+    max-height: 1000px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.ticket-section h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.ticket-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ticket-links a {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.95rem 1.2rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    text-transform: none;
+    font-size: 0.96rem;
+    font-weight: 500;
+}
+
+.ticket-links a:hover {
+    background: rgba(255, 255, 255, 0.16);
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
 footer {
-    margin-top: auto;
     padding-top: 3rem;
     padding-bottom: 10px;
     font-size: 0.8rem;
