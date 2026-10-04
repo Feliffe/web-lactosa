@@ -22,3 +22,13 @@ function desplegarInfo() {
         window.requestAnimationFrame(step);
     }
 }
+
+function toggleFechas() {
+    const boton = document.querySelector('.fechas-toggle');
+    const panel = document.getElementById('fechasPanel');
+    const abierto = boton.getAttribute('aria-expanded') === 'true';
+
+    boton.setAttribute('aria-expanded', String(!abierto));
+    panel.setAttribute('aria-hidden', String(abierto));
+    panel.classList.toggle('abierto', !abierto);
+}
