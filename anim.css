@@ -279,7 +279,6 @@ footer {
     .nav-links {
         gap: 1.5rem;
     }
-
     .fechas-panel-content {
         flex-direction: column;
         gap: 0.25rem;
@@ -287,5 +286,20 @@ footer {
 
     .fechas-panel a {
         width: 100%;
+    }
+
+
+}
+/* Mejora la legibilidad en teléfonos con android, de la sección ACERCA DE */
+@media (max-width: 380px) {
+    body {
+        padding: 20px 8px;
+    }
+    .descripcion-internet{
+    padding: 0 0.2rem 0.4rem 0.2rem;
+    }
+    .info-banda-wrapper{
+        width: 95%;
+        max-width: 100%;
     }
 }
