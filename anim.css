@@ -116,12 +116,13 @@ h1 img {
     background: none;
     cursor: pointer;
     appearance: none;
+    line-height: 1.5;
 }
 
 .fechas-underline {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     height: 2px;
     background: #ffffff;
@@ -155,7 +156,7 @@ h1 img {
 }
 
 .fechas-panel.abierto {
-    max-height: 8rem;
+    max-height: 20rem;
     padding: 0.75rem 0;
     opacity: 1;
     visibility: visible;
@@ -171,10 +172,14 @@ h1 img {
 
 .fechas-panel a {
     display: inline-block;
+    box-sizing: border-box;
     padding: 0.5rem;
     color: #ff0000;
     font-size: 0.8rem;
+    line-height: 1.5;
     text-align: center;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
     white-space: normal;
 }
 
