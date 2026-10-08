@@ -236,7 +236,7 @@ footer {
 
 .info-banda-wrapper.abierto {
     max-height: 1200px;
-    padding: 1.5rem 1rem 2rem;
+    padding: 1.5rem 0.5rem 2rem;
 }
 
 .info-banda-wrapper.abierto .descripcion-internet {
@@ -273,5 +273,28 @@ footer {
     
     .nav-links {
         gap: 1.5rem;
+    }
+    .fechas-panel-content {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .fechas-panel a {
+        width: 100%;
+    }
+
+
+}
+/* Mejora la legibilidad en teléfonos con android, de la sección ACERCA DE */
+@media (max-width: 380px) {
+    body {
+        padding: 20px 8px;
+    }
+    .descripcion-internet{
+    padding: 0 0.2rem 0.4rem 0.2rem;
+    }
+    .info-banda-wrapper{
+        width: 95%;
+        max-width: 100%;
     }
 }
