@@ -288,6 +288,22 @@ footer {
         width: 100%;
     }
 
+    .info-banda-wrapper {
+        border-radius: 16px;
+        backdrop-filter: blur(8px);
+    }
+
+    .info-banda-wrapper.abierto {
+        padding: 1rem 0.75rem 1.25rem;
+    }
+
+    .descripcion-internet {
+        margin-top: 0.5rem;
+        padding: 0 0.5rem 0.5rem;
+        font-size: 1rem;
+        line-height: 1.7;
+        text-align: left;
+    }
 
 }
 /* Mejora la legibilidad en teléfonos con android, de la sección ACERCA DE */
@@ -295,11 +311,13 @@ footer {
     body {
         padding: 20px 8px;
     }
-    .descripcion-internet{
-    padding: 0 0.2rem 0.4rem 0.2rem;
+
+    .descripcion-internet {
+        padding: 0 0.25rem 0.4rem;
     }
-    .info-banda-wrapper{
-        width: 95%;
+
+    .info-banda-wrapper {
+        width: 100%;
         max-width: 100%;
     }
 }
