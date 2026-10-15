@@ -75,6 +75,7 @@ h1 img {
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .nav-items a,
@@ -85,6 +86,7 @@ h1 img {
     font-weight: 400;
     font-family: inherit;
     text-transform: uppercase;
+    line-height: 1.5;
     padding-bottom: 5px;
     position: relative;
     transition: color 0.3s ease;
@@ -116,7 +118,6 @@ h1 img {
     background: none;
     cursor: pointer;
     appearance: none;
-    line-height: normal;
 }
 
 .fechas-underline {
@@ -306,7 +307,6 @@ footer {
     }
 
 }
-/* Mejora la legibilidad en teléfonos con android, de la sección ACERCA DE */
 @media (max-width: 380px) {
     body {
         padding: 20px 8px;
