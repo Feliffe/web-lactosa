@@ -9,21 +9,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="anim.css?v=20261008">
+    <link rel="stylesheet" href="anim.css?v=20261024">
 </head>
 <body>
-        <div class="bg-cover" id="bgCover" aria-hidden="true"></div>
+        <div class="bg-cover" id="bgCover" aria-hidden="true">
+            <div class="member-background" id="memberBackground"></div>
+        </div>
 
         <h1>
-            <img src="logo_lactosa_blanco.png" alt="Lactosa Intolerante - Sitio Oficial">
+            <button class="logo-inicio" type="button" aria-label="Volver a la descripción de la banda" onclick="mostrarDescripcionBanda()">
+                <img src="logo_lactosa_blanco.png" alt="Lactosa Intolerante - Sitio Oficial">
+            </button>
         </h1>
-    <p class="subtitle">Juanfra | Vice | Iffe | Sandman | Coni</p>
+    <p class="subtitle">
+        <button class="integrante" type="button" data-integrante="juanfra" aria-pressed="false" disabled>Juanfra</button>
+        <span aria-hidden="true"> | </span>
+        <button class="integrante" type="button" data-integrante="vice" aria-pressed="false" disabled>Vice</button>
+        <span aria-hidden="true"> | </span>
+        <button class="integrante" type="button" data-integrante="iffe" aria-pressed="false" disabled>Iffe</button>
+        <span aria-hidden="true"> | </span>
+        <button class="integrante" type="button" data-integrante="sandman" aria-pressed="false" disabled>Sandman</button>
+        <span aria-hidden="true"> | </span>
+        <button class="integrante" type="button" data-integrante="coni" aria-pressed="false" disabled>Coni</button>
+    </p>
 
-    <button class="btn-desplegable" onclick="desplegarInfo()">Acerca de</button>
+    <button class="btn-desplegable" type="button" aria-expanded="false" aria-controls="seccionInfo" onclick="desplegarInfo()">Acerca de</button>
 
     <div class="info-banda-wrapper" id="seccionInfo">
         <div class="descripcion-internet">
-            <p><strong>Lactosa Intolerante</strong> es una banda emergente de rock/indie nacida en Valparaíso formada en marzo de 2024. Con un sonido crudo, guitarras cargadas de energía y letras que retratan conflictos cotidianos desde una mirada honesta, la banda ha ido ganando espacio dentro de la escena local a través de sus presentaciones en vivo y de sus primeros lanzamientos. Tras su debut en plataformas como Spotify, su música ha comenzado a circular entre comunidades y foros de internet, donde cada vez más personas la recomiendan como una propuesta prometedora dentro del rock independiente chileno.</p>
+            <p id="descripcionTexto" aria-live="polite"><strong>Lactosa Intolerante</strong> es una banda emergente de rock/indie nacida en Valparaíso formada en marzo de 2024. Con un sonido crudo, guitarras cargadas de energía y letras que retratan conflictos cotidianos desde una mirada honesta, la banda ha ido ganando espacio dentro de la escena local a través de sus presentaciones en vivo y de sus primeros lanzamientos.</p>
         </div>
     </div>
     
@@ -35,7 +49,7 @@
             <button class="fechas-toggle" type="button" aria-expanded="false" aria-controls="fechasPanel" onclick="toggleFechas()">Fechas<span class="fechas-underline" aria-hidden="true"></span></button>
             <a href="rider.pdf" target="_blank">Rider Técnico</a>
             <a href="mailto:contactolactosaintolerante@gmail.com">Contacto</a>
-            <a href="Dossier.pdf">Dosier</a>
+            <a href="Dossier.pdf">Dossier</a>
         </div>
         <div class="fechas-panel" id="fechasPanel" aria-hidden="true">
             <div class="fechas-panel-content">
@@ -50,6 +64,6 @@
         &copy; 2026 Lactosa Intolerante. Todos los derechos reservados.
     </footer>
 
-    <script src="script.js?v=20261003"></script>
+    <script src="script.js?v=20261024"></script>
 </body>
 </html>
